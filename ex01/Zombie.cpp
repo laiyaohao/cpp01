@@ -1,8 +1,13 @@
 #include "./Zombie.hpp"
 
+int Zombie::nb = 0;
+
+
 Zombie::Zombie()
 {
   this->name = "";
+  this->index = Zombie::nb;
+  Zombie::nb++;
   std::cout << "Zombie is created but he/she has no name :(" << std::endl;
 }
 
@@ -14,10 +19,11 @@ void  Zombie::setName(std::string name)
 
 Zombie::~Zombie(void)
 {
-  std::cout << this->name << " is destroyed" << std::endl;
+  std::cout << this->name << this->index << " is destroyed" << std::endl;
 }
 
 void  Zombie::announce(void)
 {
-  std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+  std::cout << this->name << this->index << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
+
