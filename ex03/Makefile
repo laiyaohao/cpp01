@@ -1,7 +1,7 @@
-NAME := zombiehorde
+NAME := violence
 CC := c++
 CFLAGS := -Wall -Wextra -Werror -std=c++98
-SRC := main.cpp Zombie.cpp zombieHorde.cpp
+SRC := main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 OBJ := ${SRC:.cpp=.o}
 
 all: ${NAME}
@@ -20,4 +20,4 @@ ${NAME}: ${OBJ}
 %.o: %.cpp
 	${CC} ${CFLAGS} -c $< -o $@
 
-.PHONY: all re clean fclean
+.PHONY: all clean fclean re
