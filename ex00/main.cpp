@@ -6,8 +6,8 @@ int main(void)
   Zombie  *zombie2 = Zombie::newZombie("zombie2");
   zombie1->announce();
   zombie2->announce();
+  Zombie::randomChump("zombie3");
   delete zombie1;
   delete zombie2;
-  Zombie::randomChump("zombie3");
   return 0;
 }

@@ -9,8 +9,7 @@ class Zombie
     std::string name;
 
   public:
-    Zombie();
-    void setName(std::string name);
+    Zombie(std::string name);
     void  announce(void);
     static Zombie  *newZombie(std::string name);
     static void  randomChump(std::string name);

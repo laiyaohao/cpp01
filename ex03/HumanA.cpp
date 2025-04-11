@@ -2,10 +2,10 @@
 #include "Weapon.hpp"
 
 
-HumanA::HumanA(std::string name, Weapon weapon)
+HumanA::HumanA(std::string name, Weapon &weapon)
 {
   this->name = name;
-  this->weapon = weapon;
+  this->weapon = &weapon;
 }
 
 std::string HumanA::getName()
@@ -20,15 +20,15 @@ void  HumanA::setName(std::string name)
 
 Weapon  HumanA::getWeapon()
 {
-  return this->weapon;
+  return *this->weapon;
 }
 
-void  HumanA::setWeapon(Weapon weapon)
-{
-  this->weapon = weapon;
-}
+// void  HumanA::setWeapon(Weapon weapon)
+// {
+//   this->weapon = weapon;
+// }
 
 void  HumanA::attack()
 {
-  std::cout << "attack by " << HumanA::getName() << " using " << HumanA::getWeapon().getName() << std::endl;
+  std::cout << "attack by " << HumanA::getName() << " using " << HumanA::getWeapon().getType() << std::endl;
 }

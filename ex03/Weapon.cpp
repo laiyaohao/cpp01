@@ -3,19 +3,9 @@
 Weapon::Weapon()
 {}
 
-Weapon::Weapon(std::string name)
+Weapon::Weapon(std::string type)
 {
-  this->name = name;
-}
-
-std::string Weapon::getName()
-{
-  return this->name;
-}
-
-void  Weapon::setName(std::string name)
-{
-  this->name = name;
+  this->type = type;
 }
 
 std::string Weapon::getType()
