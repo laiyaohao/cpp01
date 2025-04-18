@@ -1,11 +1,9 @@
 #include "HumanA.hpp"
 #include "Weapon.hpp"
 
-
-HumanA::HumanA(std::string name, Weapon &weapon)
+// initializing reference member using constructor's initializer list
+HumanA::HumanA(std::string name, Weapon &weapon) : name(name), weapon(weapon)
 {
-  this->name = name;
-  this->weapon = &weapon;
 }
 
 std::string HumanA::getName()
@@ -20,13 +18,8 @@ void  HumanA::setName(std::string name)
 
 Weapon  HumanA::getWeapon()
 {
-  return *this->weapon;
+  return this->weapon;
 }
-
-// void  HumanA::setWeapon(Weapon weapon)
-// {
-//   this->weapon = weapon;
-// }
 
 void  HumanA::attack()
 {

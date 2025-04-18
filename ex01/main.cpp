@@ -4,7 +4,7 @@ int main(void)
 {
   int i;
 
-  Zombie *horde = Zombie::zombieHorde(9, "zoombie");
+  Zombie *horde = zombieHorde(9, "zoombie");
   i = 0;
   while (i < 9)
   {
